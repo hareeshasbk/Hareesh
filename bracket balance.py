@@ -1,4 +1,3 @@
-#write python program to implement bracket matching using stack
 def bracketsbalanced(expr):
     STACK=[]
     for char in expr:
@@ -11,18 +10,16 @@ def bracketsbalanced(expr):
             if current_char=='(':
                 if char!=')':
                     return False
-
-            if current_char=='{':
+            elif current_char=='{':
                 if char!='}':
                     return False
-
-            if current_char=='[':
+            elif current_char=='[':
                 if char!=']':
                     return False
     if STACK:
         return False
     return True
-
+    
 if __name__=="__main__":
     expr=input("Enter expression = ")
     if bracketsbalanced(expr):
